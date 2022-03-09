@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction des prix des voitures</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/client/script.js"></script>
+    <link rel="stylesheet" href="/client/style.css">
+</head>
+<body>
+    
+    <div class="img" style="background-image: url(/client/background2.jpg);"></div>
+    <div class="container-fluid responsive">
+        <div class="shadow-lg p-4" style="background-color: rgba(255, 255, 255, 0.7); width: 120%;display: inline-block;"> 
+            <div class="row"> 
+                <div class="col-sm-5">
+                    <img src="/client/logo1.png" alt="logo" style="width: 100%;display: inline-block;height:90%;vertical-align: middle;">
+                </div>
+                <div class="col-sm-7">
+                    <p id="header" class="text-center">Prediction<br> des prix des voitures occasions</p>
+                </div>      
+            </div> 
+            <div>
+                <div>
+                    <p class="label">Type de voiture :</p>
+                    <select id="name" class="custom-select mb-3">
+                    </select>
+                </div>
+                <div>
+                    <p class="label">Type de transmission:</p>
+                    <select id="transmission" class="custom-select mb-3">
+                        <option selected value="Manual">Manuel</option>
+                        <option value="Automatic">Automatique</option>
+                    </select>
+                </div>
+                <div>
+                    <p class="label">Type de carburant:</p>
+                    <select id="fuel" class="custom-select mb-3">
+                        <option selected>Diesel</option>
+                        <option value="Petrol">Essence</option>
+                        <option value="Other">Autre</option>
+                    </select>
+                </div>
+                <div>
+                <p class="label">Nombre d'anciens propriétaires:</p>
+                    <select id="owner" class="custom-select mb-3">
+                        <option value="1" selected>Un</option>
+                        <option value="2">Deux</option>
+                        <option value="3">Trois et plus</option>
+                    </select>
+                </div>
+                <div>
+                    <p class="label">Année où la voiture a été amenée:</p>
+                    <select id="year" class="custom-select mb-3">
+                        <option selected>2006</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="label mb-3" for="km_driven">Kilomètres parcourus (odomètre) :</label>
+                    <input type="number" class="form-control" id="km_driven">
+                    <div id="fill1" class="text-center text-danger pt-2"></div>
+                </div>
+                <div class="form-group">
+                    <label class="label mb-3" for="engine">Capacité du moteur(centimètres cubes (cc)) :</label>
+                    <input type="number" class="form-control" id="engine">
+                    <div id="fill2" class="text-center text-danger pt-2"></div>
+                </div>
+                <div class="form-group">
+                    <label class="label mb-3" for="engine">Max Power :</label>
+                    <input type="number" class="form-control" id="max_power">
+                    <div id="fill3" class="text-center text-danger pt-2"></div>
+                </div>      
+                <p class="label">Prix ​​estimé : </p>
+                <div class="input-group my-3">
+                    <input type="text" class="form-control form-control" placeholder="Php 0.00" id="price">
+                    <div class="input-group-append">
+                       <button id="predict" class="btn btn-secondary"  >Prix</button>
+                      
+                    </div>
+                </div>
+                <div id="wait" class="text-center mt-3">
+
+                </div>
+            </div>
+
+        </div> 
+        </div>
+    </div> 
+
+    
+</body>
+</html>
